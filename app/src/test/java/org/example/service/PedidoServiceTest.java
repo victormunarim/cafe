@@ -15,8 +15,6 @@ import static org.mockito.Mockito.*;
 class PedidoServiceTest {
     @Mock
     private PedidoRepository pedidoRepository;
-    @Mock
-    private ClienteRepository clienteRepository;
     @InjectMocks
     private PedidoService pedidoService;
 
