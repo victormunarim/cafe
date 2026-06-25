@@ -21,7 +21,7 @@ public class PedidoService {
         return pedido.calcularTotal();
     }
 
-    public Pedido cadastrar(Pedido pedido) {
+    public void cadastrar(Pedido pedido) {
         if (pedido == null) {
             throw new IllegalArgumentException("Pedido não pode ser nulo");
         }
@@ -36,7 +36,7 @@ public class PedidoService {
             throw new IllegalArgumentException("Cliente do pedido não encontrado");
         }
         pedido.calcularTotal();
-        return pedidoRepository.salvar(pedido);
+        pedidoRepository.salvar(pedido);
     }
 
     public void atualizarStatus(int id, StatusPedido status) {
