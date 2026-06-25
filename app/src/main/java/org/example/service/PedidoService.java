@@ -6,9 +6,11 @@ import org.example.repository.PedidoRepository;
 import java.util.List;
 
 public class PedidoService {
+    //ocultação de informação
     private final PedidoRepository pedidoRepository;
     private final ClienteRepository clienteRepository;
 
+    //baixo acoplamento
     public PedidoService(PedidoRepository pedidoRepository, ClienteRepository clienteRepository) {
         this.pedidoRepository = pedidoRepository;
         this.clienteRepository = clienteRepository;

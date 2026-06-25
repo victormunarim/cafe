@@ -1,21 +1,13 @@
 package org.example.model;
 
+//composição ao contrario de herança
 public class Produto {
     private int id;
     private String nome;
     private double preco;
     private boolean disponivel;
 
-    public Produto() {}
-
     public Produto(String nome, double preco, boolean disponivel) {
-        this.nome = nome;
-        this.preco = preco;
-        this.disponivel = disponivel;
-    }
-
-    public Produto(int id, String nome, double preco, boolean disponivel) {
-        this.id = id;
         this.nome = nome;
         this.preco = preco;
         this.disponivel = disponivel;

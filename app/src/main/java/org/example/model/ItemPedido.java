@@ -6,16 +6,7 @@ public class ItemPedido {
     private int quantidade;
     private double subtotal;
 
-    public ItemPedido() {}
-
     public ItemPedido(Produto produto, int quantidade) {
-        this.produto = produto;
-        this.quantidade = quantidade;
-        this.subtotal = calcularSubtotal();
-    }
-
-    public ItemPedido(int id, Produto produto, int quantidade) {
-        this.id = id;
         this.produto = produto;
         this.quantidade = quantidade;
         this.subtotal = calcularSubtotal();
@@ -33,26 +24,12 @@ public class ItemPedido {
         return produto;
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
-        this.subtotal = calcularSubtotal();
-    }
-
     public int getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-        this.subtotal = calcularSubtotal();
-    }
-
     public double getSubtotal() {
         return this.subtotal;
-    }
-
-    public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
     }
 
     public double calcularSubtotal() {

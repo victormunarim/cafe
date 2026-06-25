@@ -14,11 +14,6 @@ public class Pedido {
 
     public Pedido() {}
 
-    public Pedido(int id, Cliente cliente) {
-        this.id = id;
-        this.cliente = cliente;
-    }
-
     public int getId() {
         return id;
     }
@@ -39,11 +34,6 @@ public class Pedido {
         return itens;
     }
 
-    public void setItens(List<ItemPedido> itens) {
-        this.itens = itens;
-        this.calcularTotal();
-    }
-
     public void adicionarItem(ItemPedido item) {
         this.itens.add(item);
         this.calcularTotal();
@@ -61,16 +51,8 @@ public class Pedido {
         return dataCriacao;
     }
 
-    public void setDataCriacao(LocalDateTime dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
-
     public double getValorTotal() {
         return valorTotal;
-    }
-
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
     }
 
     public double calcularTotal() {
